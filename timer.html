@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>COUNTDOWN TIMER</title>
+
+     <style type="text/css">
+     	@font-face{
+	font-family: sevenSegment;
+}
+body{
+ background-color: black;
+}
+h1{
+	font-family: sevenSegment;
+	font-size: 10cm;
+	color:blue;
+}
+.container{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+      <div class="container">
+      	<h1 id="count">10</h1>
+      </div>
+
+      <script type="text/javascript">
+      	var counter=10;
+
+      	setInterval(function(){
+      		counter--;
+      		if(counter>=0){
+      			id=document.getElementById("count");
+      		    id.innerHTML=counter;
+             }
+             if(counter==0)
+             {
+             	id.innerHTML ="End";
+             }
+      	}, 1000);
+      </script>
+</body>
+</html>
